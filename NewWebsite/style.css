@@ -13,7 +13,6 @@
   width: 100%;
 }
 
-/*-- Clearfix Hack --*/
 .row:after {
   display: table;
   clear: both;
@@ -111,6 +110,11 @@ body > header a {
   position: relative;
   bottom: 4px;
   font-size: 0.9rem;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px px;
+  text-decoration: none;
 }
 
 body > header a:hover {
@@ -119,6 +123,14 @@ body > header a:hover {
 
 body > header li {
   width: 10%;
+  display: inline-block;
+}
+
+body > header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /*____________________________________________________________________________________________________________________________________________*/
@@ -168,10 +180,28 @@ body > header li {
   font-size: 0.8rem;
   margin-left: 15px;
   color: #444;
+  display: inline-block;
+}
+
+.slide-1 header nav a{
+  position: relative;
+  bottom: 4px;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
 }
 
 .slide-1 header nav li:first-child {
   color: #888;
+  position: relative;
+  bottom: 4px;
+  display: inline-block;
+  text-align: center;
+  padding: 7px 8px;
+  top: 1px;
+  text-decoration: none;
 }
 
 .slide-1 h1 {
