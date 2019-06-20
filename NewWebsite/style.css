@@ -154,6 +154,12 @@ body > header ul {
   font-size: 1.5rem;
   font-weight: normal;
   color: #444;
+  position: relative;
+  bottom: 4px;
+  display: block;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
 }
 
 .slide-1 header h2 a:hover {
