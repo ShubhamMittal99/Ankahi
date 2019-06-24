@@ -61,18 +61,30 @@ li a:hover {
 
 .heading{
 	position: relative;
-	bottom:300px;
+	bottom:400px;
 	color:white;
-	width:400px;
-	left:1100px;
+	width:500px;
+	left:60%;
 }
 
 .heading h1{
-	margin: 0 auto;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 45px;
 }
 
+.heading h2{
+	text-align:center;
+	font-size:30px;
+	font-family: 'Poppins', sans-serif;
+}
 
-
+.heading h3{
+	text-align:center;
+	font-size: 18px;
+	line-height: 1.4;
+	font-family: 'Poppins', sans-serif;
+}
 
 
 
