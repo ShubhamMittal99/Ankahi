@@ -1,3 +1,8 @@
+.navbar{
+	position:fixed;
+	width:100%;
+}
+
 .navbar ul{
 	list-style-type: none;
 	margin: 0;
@@ -13,10 +18,10 @@
 .navbar a {
   display: block;
   position:relative;
-  bottom:25px;
+  bottom:20px;
   color: white;
   text-align: center;
-  padding: 10px 30px;
+  padding: 15px 80px;
   text-decoration: none;
 }
 
@@ -29,7 +34,7 @@ li a:hover {
 	height:50px;
 	overflow:hidden;
 	margin-top:20px;
-	margin-left:15px;
+	margin-left:30px;
 }
 
 .navbar img{
@@ -38,8 +43,7 @@ li a:hover {
 }
 
 .navbar li:nth-child(2){
-	margin-left: 410px;
-	
+	margin-left:100px;
 }
 
 	
