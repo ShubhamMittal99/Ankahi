@@ -203,8 +203,10 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 }
 
 .show img{
-	width: 20%;
+	width: 51.5%;
 	display:block;
+	position: relative;
+	right: 20px;
 }
 
 .show{
@@ -212,7 +214,6 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 	width: 45%;
 	vertical-align: top;
 	border: 2px solid black;
-	margin-bottom: 40px;
 	padding: 0 30px;
 }
 
@@ -221,10 +222,21 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 }
 
 .description{
+	vertical-align: top;
+	text-align: left;
 	display:inline-block;
-	width:70%;
+	width:50%;
 	position:relative;
-	left:70px;
-	bottom:60px;
+	left:140px;
+	bottom: 31.5vh;
 	border:1px red solid;
+}
+
+.description h1{
+	font-size: 24px;
+}
+
+.description h2{
+	font-size: 20px;
+	line-height: 1.8;
 }
