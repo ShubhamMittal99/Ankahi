@@ -98,52 +98,69 @@ li a:hover {
 	font-family: 'Poppins', sans-serif;
 }
 
+.Testimonials{
+	position: relative;
+	bottom: 220px;
+}
+
+.Testimonials h2{
+	display: block;
+	text-align: center;
+	font-size: 48px;
+	font-family: 'Poppins', sans-serif;
+}
+
 .grid{
 	display: grid;
 	position: relative;
 	grid-template:
 	'a b c d';
-    width:100%;
-    height:1000px;
+    max-width:100%;
+    height:600px;
 	bottom: 100px;
 	top: 50px;
 	margin-bottom: 400px;
+	padding: 0 2%;
 }
 
-.top .left{
+.1{
 	grid-area: a;
 }
 
-.top .right{
+.2{
 	grid-area: b;
 }
 
-.bottom .left{
+.3{
 	grid-area: c;
 }
 
-.bottom .right{
+.4{
 	grid-area: d;
 }
 
 .pp{
-  width:200px;
-  border-radius: 50%;
+    margin-left: 20%;
+    width:200px;
+    border-radius: 50%;
 }
 
 .name{
 	font-weight:bold;
+	text-align: center;
 }
 
 .quote, .name{
-	display: block;
-	position: relative;
-	bottom: 10%;
-	padding: 0px 100px;
-	line-height: 1.7;
+	line-height: 1.4;
+	font-family: 'Poppins', sans-serif;
 }
 
 .quote{
 	margin-top: 20px; 
+	padding: 0 4%;
+	text-align: left;
 }
 
+.item{
+	position: relative;
+}
