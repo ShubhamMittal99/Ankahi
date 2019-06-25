@@ -4,7 +4,7 @@ carousel();
 function carousel() {
   var i;
   var x = document.getElementsByClassName("slide");
-  var y = document.getElementsByClassName("slideshow");
+  var y = document.getElementsByClassName("slideshow")[0];
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
@@ -12,13 +12,13 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {
     myIndex = 1;
-    bkimg = (x.length);
+    bg = (x.length);
   }
   if (myIndex === 1) {
-    bkimg = (x.length);
+    bg = (x.length);
   }    
   x[myIndex-1].style.display = "block";  
-  y.style.backgroundImage = 'url(' + x[bkimg - 1].src + ')';
-  setTimeout(carousel, 4000); // Change image every 2 seconds
+  y.style.backgroundImage = 'url(' + x[bg - 1].src + ')';
+  setTimeout(carousel, 2000);
 }
 
