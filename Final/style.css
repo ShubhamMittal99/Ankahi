@@ -57,13 +57,8 @@ li a:hover {
 	max-width:100%;
 	position:relative;
 	z-index:-1;
-	animation: EaseInOut 4s infinite;
-}
-
-@keyframes EaseInOut{
-	0%{opacity: 0.1;}
-	50%{opacity: 1;}
-	100%{opacity: 0.1;}
+	background-size: cover;
+	background-image: url('');
 }
 
 .heading{
@@ -73,14 +68,8 @@ li a:hover {
 	color:white;
 	width:500px;
 	left:60%;
-	animation: compensate 4s infinite;
 }
 
-@keyframes compensate{
-	0%{color: black;}
-	50%{color:white;}
-	100%{color: black;}	
-}
 
 .heading h1{
 	text-align: center;
