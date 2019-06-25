@@ -104,6 +104,8 @@ li a:hover {
 .Testimonials{
 	position: relative;
 	bottom: 220px;
+	max-height: 600px;
+	overflow: hidden;
 }
 
 .Testimonials h2{
