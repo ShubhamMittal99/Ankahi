@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" id="viewport" content="target-densitydpi=high-dpi,initial-scale=1.0,user-scalable=no" />
+        <title>Document Title</title>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <style>
+            .w3-content.w3-section {position: relative;}
+
+            #bkimg {background-size: contain; background-position: center; background-image: url(http://www.w3schools.com/w3css/img_rr_04.jpg); position: absolute; top:0; left: 0; right:0; bottom:0; z-index: -1; }
+			
+            @-webkit-keyframes fading{0%{opacity:0}80%{opacity:1}100%{opacity:1}}
+			
+            @keyframes fading{0%{opacity:0}80%{opacity:1}100%{opacity:1}}
+            .w3-animate-fading{-webkit-animation:fading 10s infinite;animation:fading 10s infinite;position: relative; z-index: 9999;}
+
+
+        </style>
+    </head>
+    <body>
+
+        <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+        <div class="w3-content w3-section" style="max-width:500px">
+            <div id="bkimg"></div>
+            <img class="mySlides w3-animate-fading" src="http://www.w3schools.com/w3css/img_rr_01.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="http://www.w3schools.com/w3css/img_rr_02.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="http://www.w3schools.com/w3css/img_rr_03.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="http://www.w3schools.com/w3css/img_rr_04.jpg" style="width:100%">
+
+        </div>
+
+        <script>
+            var myIndex = 0, timer, greatest_img_height = 0, duration = 5000;
+            var x = document.getElementsByClassName("mySlides");
+            var y = document.getElementById("bkimg");
+            for (var j = 0; j < x.length; j++) {
+                if (x[j].height > greatest_img_height)
+                {
+                    greatest_img_height = x[j].height;
+                }
+
+            }
+            //find largest height of images
+            for (var j = 0; j < x.length; j++) {
+                x[j].style.height = greatest_img_height + "px";
+            }
+
+            //set the background image dimensions to match img element dimensions
+            y.style.height = greatest_img_height + "px";
+            y.style.backgroundSize = "100% " + greatest_img_height + "px";
+
+            carousel();
+
+            function carousel() {
+
+
+                clearTimeout(timer);
+                var i;
+
+                bkimg = myIndex;
+                myIndex++;
+                if (myIndex > x.length) {
+                    myIndex = 1;
+                    bkimg = (x.length);
+                }
+                if (myIndex === 1) {
+                    bkimg = (x.length);
+                }
+
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+
+                var anim_element = x[myIndex - 1];
+
+                // reset img timing to start from 0 by cloning and appending back to give a clean new start of animation
+                var anim_element_clone = anim_element.cloneNode(true);
+                anim_element.parentNode.replaceChild(anim_element_clone, anim_element);
+
+                x[myIndex - 1].style.animationDuration = duration / 1000 + "s";
+                x[myIndex - 1].style.display = "block";
+                y.style.backgroundImage = 'url(' + x[bkimg - 1].src + ')';
+                timer = setTimeout(carousel, duration - 1000);
+
+            }
+        </script>
+
+    </body>
+</html>
