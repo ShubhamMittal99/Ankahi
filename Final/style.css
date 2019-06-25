@@ -147,20 +147,23 @@ li a:hover {
 
 .name{
 	font-weight:bold;
-	text-align: center;
 }
 
 .quote, .name{
 	line-height: 1.4;
 	font-family: 'Poppins', sans-serif;
+	text-align:center;
 }
 
 .quote{
 	margin-top: 20px; 
 	padding: 0 4%;
-	text-align: left;
 }
 
 .item{
 	position: relative;
+}
+
+.quotation{
+	font-size:20px;
 }
