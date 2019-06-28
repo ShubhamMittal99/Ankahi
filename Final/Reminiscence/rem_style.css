@@ -48,27 +48,42 @@ li a:hover {
 	margin-left:100px;
 }
 
-.pics{
+.pics {
+    position: relative;
     display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 80%;
+    width: 25%;
+    height: 4000px;
+    float: left;
+    margin-right: 20px;
+    top:15%;
+    background-color: antiquewhite;
 }
 
-.grid {
-  width: 125px;
-  background: #DDD;
-  height: 125px;
-  float: left;
-  margin-right: 20px;
+.sec {
+    position: relative
+    background-color:aqua;
+    justify-content: end;
+    left:40%;
+    
+}
+
+.pri {
+}
+
+.pics img {
+    width:100%;
+    border-radius:50%;
 }
 
 .item {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px 5px 0;
-  background: #09F;
-  float: left;
-  transition: opacity 0.4s;
+    width: 80%;
+    margin: 0 5px 5px 0;
+    transition: opacity 0.4s;
+    border:1px solid black;
 }
 
-.item.is-visibe {
-  opacity: translateX(145px);
+.sec .item{
+    border: 1px solid red;
 }
