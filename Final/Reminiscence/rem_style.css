@@ -51,3 +51,24 @@ li a:hover {
 .pics{
     display: grid;
 }
+
+.grid {
+  width: 125px;
+  background: #DDD;
+  height: 125px;
+  float: left;
+  margin-right: 20px;
+}
+
+.item {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 5px 0;
+  background: #09F;
+  float: left;
+  transition: opacity 0.4s;
+}
+
+.item.is-visibe {
+  opacity: translateX(145px);
+}
