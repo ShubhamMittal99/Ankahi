@@ -46,8 +46,8 @@ li a:hover {
 
 .navbar li:nth-child(2){
 	margin-left:100px;
-<<<<<<< HEAD
 }
-=======
+
+.pics{
+    display: grid;
 }
->>>>>>> 6a4be7c27e7d99963aaeaab838f72373786d2758
