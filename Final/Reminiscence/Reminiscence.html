@@ -90,7 +90,25 @@
        <div class="description last">
                 <h3>With focused visual tools and preprocessor support, Brackets is a modern text editor that makes it easy to design in the browser. It's crafted from the ground up for web designers and front-end developers.</h3>
         </div>
-        <script src="TopUp.js">
+        <script>
+            let items = document.querySelectorAll('.item');  
+            let x= document.querySelector('.first');
+            let y= document.querySelector('.last');
+            items.forEach(item => item.addEventListener('mouseenter',showDescription));
+            function showDescription(e){ 
+                console.log("something");
+                let z= this.classList.item(1);
+                console.log(z);
+                if(z==1){
+                    console.log("im in the first");
+                    x.style.display= "visible";
+                }
+                
+                if(z==18){
+                    y.style.display= "visible";
+                    console.log("im in the second");
+                }
+            }
         
         </script>
     </body>

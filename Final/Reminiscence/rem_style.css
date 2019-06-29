@@ -109,6 +109,7 @@ body {
     top:30%;
     width:50%;
     left:20%;
+    display: none;
 }
 
 .last {
@@ -117,4 +118,5 @@ body {
     top:200%;
     width:50%;
     left:20%;
+    display: none;
 }
