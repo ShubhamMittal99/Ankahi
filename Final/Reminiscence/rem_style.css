@@ -40,7 +40,6 @@ li a:hover {
 }
 
 .navbar img{
-	height:100%;
 	width:100%;
 }
 
@@ -49,41 +48,57 @@ li a:hover {
 }
 
 .pics {
-    position: relative;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 80%;
-    width: 25%;
-    height: 4000px;
-    float: left;
-    margin-right: 20px;
+    /*grid-template-columns: 80%;*/
+    width: 10%;
+    height: 200vh;
+    overflow: hidden;
     top:15%;
-    background-color: antiquewhite;
+    grid-gap: 2%;
 }
 
-.sec {
-    position: relative
-    background-color:aqua;
-    justify-content: end;
-    left:40%;
-    
+.one{
+    position: relative;
+    left:2%;
+    float: left;
 }
 
-.pri {
+.two {
+    float:right;
+    position: relative;
+    right:2%;
+    /*justify-content: end;*/
 }
+
 
 .pics img {
+    height:100%;
     width:100%;
     border-radius:50%;
 }
 
 .item {
-    width: 80%;
-    margin: 0 5px 5px 0;
-    transition: opacity 0.4s;
-    border:1px solid black;
+    width: 100%;
+    transition: scale 0.4s;
+    height:100%;
+    overflow:hidden;
 }
 
-.sec .item{
-    border: 1px solid red;
+.item:hover{
+    transform: scale(2);
+    overflow: visible;
+}
+/*
+.item:hover .pics{
+    overflow: visible;
+}
+*/
+body {
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30); 
+    background-size : cover;
+    width: 100%;
+    overflow-x: hidden;
 }
