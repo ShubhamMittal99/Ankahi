@@ -50,7 +50,7 @@ li a:hover {
 .heading{
     position: absolute;
     float:center;
-    top:10%;
+    top:16%;
 }
 
 .pics {
@@ -59,7 +59,7 @@ li a:hover {
     width: 10%;
     height: 200vh;
     overflow: hidden;
-    top:15%;
+    top:25%;
     grid-gap: 2%;
 }
 
@@ -101,4 +101,20 @@ body {
     background-size : cover;
     width: 100%;
     overflow-x: hidden;
+}
+
+.first {
+    background-color: aliceblue;
+    position:relative;
+    top:30%;
+    width:50%;
+    left:20%;
+}
+
+.last {
+    background-color: antiquewhite;
+    position:relative;
+    top:200%;
+    width:50%;
+    left:20%;
 }
