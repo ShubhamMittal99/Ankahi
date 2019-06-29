@@ -110,6 +110,7 @@ body {
     width:50%;
     left:20%;
     display: none;
+    z-index:99;
 }
 
 .last {
@@ -118,5 +119,6 @@ body {
     top:200%;
     width:50%;
     left:20%;
-    display: none;
+    display: none ;
+    z-index:99;
 }
