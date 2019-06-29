@@ -47,10 +47,15 @@ li a:hover {
 	margin-left:100px;
 }
 
+.heading{
+    position: absolute;
+    float:center;
+    top:10%;
+}
+
 .pics {
     display: grid;
     grid-auto-flow: row;
-    /*grid-template-columns: 80%;*/
     width: 10%;
     height: 200vh;
     overflow: hidden;
@@ -68,7 +73,6 @@ li a:hover {
     float:right;
     position: relative;
     right:2%;
-    /*justify-content: end;*/
 }
 
 
@@ -80,7 +84,7 @@ li a:hover {
 
 .item {
     width: 100%;
-    transition: scale 0.4s;
+    transition: transform 0.4s;
     height:100%;
     overflow:hidden;
 }
@@ -89,11 +93,7 @@ li a:hover {
     transform: scale(2);
     overflow: visible;
 }
-/*
-.item:hover .pics{
-    overflow: visible;
-}
-*/
+
 body {
     background: #141E30;
     background: -webkit-linear-gradient(to right, #243B55, #141E30);
