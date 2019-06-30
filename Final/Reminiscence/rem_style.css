@@ -108,13 +108,13 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     display: none;
 }
 
-.description:nth-of-type(1) {
+body > .description:nth-of-type(1){
     background-color: aliceblue;
     position:relative;
     top:30%;
     width:50%;
     left:20%;
-    display: none; 
+    display: block; 
     z-index:99;
 }
 
@@ -127,4 +127,3 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     display: none ; 
     z-index:99;
 }
-*/
