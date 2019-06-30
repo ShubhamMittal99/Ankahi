@@ -347,8 +347,10 @@ May you succeed in all your future endeavors!</h3>
             }
             
             function hideDescription(){
-                x.style.display = "none";
-                y.style.display = "none";
+                for( i=0;i<arr.length;i++) {
+                    let x=arr[i];
+                    x.style.display="none";
+                }
             }
         </script>
 </html>
