@@ -95,15 +95,20 @@ li a:hover {
 }
 
 body {
-    background: #141E30;
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);
-    background: linear-gradient(to right, #243B55, #141E30); 
+    background: #B2FEFA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-size : cover;
     width: 100%;
     overflow-x: hidden;
 }
 
-.first {
+.description{
+    display: none;
+}
+
+.description:nth-of-type(1) {
     background-color: aliceblue;
     position:relative;
     top:30%;
@@ -113,7 +118,7 @@ body {
     z-index:99;
 }
 
-.last {
+.description:nth-of-type(18) {
     background-color: antiquewhite;
     position:relative;
     top:200%;
@@ -122,3 +127,4 @@ body {
     display: none ; 
     z-index:99;
 }
+*/
