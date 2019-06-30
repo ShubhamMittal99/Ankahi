@@ -106,9 +106,14 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
 
 .description{
     display: none;
+    float:left;
 }
 
-body > .description:nth-of-type(1){
+.description h2,h3,p{
+    
+}
+
+div:nth-of-type(5){
     background-color: aliceblue;
     position:relative;
     top:30%;
@@ -118,10 +123,10 @@ body > .description:nth-of-type(1){
     z-index:99;
 }
 
-.description:nth-of-type(18) {
+.description:nth-of-type(22) {
     background-color: antiquewhite;
     position:relative;
-    top:200%;
+    top:180%;
     width:50%;
     left:20%;
     display: none ; 
