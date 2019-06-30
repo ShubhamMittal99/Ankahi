@@ -108,6 +108,12 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     display: none;
     float:left;
     box-shadow: 10px 10px 8px 10px #057c94;
+    background-color: aliceblue;
+    position:relative;
+    width:50%;
+    left:20%; 
+    z-index:99;
+
 }
 
 .description h2{
@@ -122,26 +128,6 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     width:50%;
     float:right;
     padding:2px;
-}
-
-div:nth-of-type(5){
-    background-color: aliceblue;
-    position:relative;
-    top:30%;
-    width:50%;
-    left:20%;
-    display: none; 
-    z-index:99;
-}
-
-.description:nth-of-type(22) {
-    background-color: antiquewhite;
-    position:relative;
-    top:180%;
-    width:50%;
-    left:20%;
-    display: none ; 
-    z-index:99;
 }
 
 .description img{
