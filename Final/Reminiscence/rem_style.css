@@ -107,10 +107,21 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
 .description{
     display: none;
     float:left;
+    box-shadow: 10px 10px 8px 10px #057c94;
 }
 
-.description h2,h3,p{
-    
+.description h2{
+    display:inline-block;
+    width:50%;
+    float:right;
+    padding:2px;
+}
+
+.description h3 {
+    display:inline-block;
+    width:50%;
+    float:right;
+    padding:2px;
 }
 
 div:nth-of-type(5){
@@ -119,7 +130,7 @@ div:nth-of-type(5){
     top:30%;
     width:50%;
     left:20%;
-    display: block; 
+    display: none; 
     z-index:99;
 }
 
@@ -131,4 +142,11 @@ div:nth-of-type(5){
     left:20%;
     display: none ; 
     z-index:99;
+}
+
+.description img{
+    width:48%;
+    height:100%;
+    position: absolute;
+    display: inline-block;
 }
