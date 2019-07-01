@@ -114,13 +114,13 @@ Saurabh Kumar was the director of the Stage team and apart from being a stupendo
                 <p>
                     Take it from a person who had absolutely no sense of scale, or take it from a person for whom music is the strong suit; both will be incomplete awe of what this guy has been able to create with a bunch of instruments. 'One man army', as the street team calls him very dearly, is the perfect description of this super duper musician.
                 </p>
-                <p><br>
+                <p>
 "Aage xylo, bagal me harmonium, niche Djembe and haath me guitar" could be the perfect words to define him during the weeks before any major event. As long as he was there, no one ever had to worry about what would happen to the music, because "Rao sir sambhal lenge". He is the reason half the people in the street team could sit in the parodies when all their roles were taken away. He is the reason the Mandli wanted to perfect their beats, his hardwork and dedication truly drove us all to push ourselves harder.
                 </p>
-                <p><br>
+                <p>
 He is the one who has given us the best memories. His infinite jamming sessions will most definitely be the one thing that the entire dramatics society will miss. It's his aura and the magic that he creates with his guitar, that once he starts playing, automatically everyone close by will join to sing along. 
                 </p>
-                <p><br>
+                <p>
 What Rao sir has given us, can never be replaced, such a personality has never been seen in Dramatics ever. He'll continue to be loved, adored and respected by everyone. Now that he's going, we hope that he still continues to help us and shower the generations to come with his music sense and awesomeness!
                 </p></h3>
         </div>
@@ -253,17 +253,16 @@ He is one of the main reasons that our Dramatics Club is able to reach such heig
         <div class="description">
             <img src="images/rp14.jpg">
             <h2>Reminiscense | 14 <br> Sangam Bharti</h2>
-            <h3><p><br>जाने नहीं देंगे तुझे, जाने तुझे देंगे नहीं
-चाहे तुझको बन्दी बुला ले, हम ना बन्दी से डरनेवाले
-सर्कल पर डटके खड़े है हम
-अनकही से नज़रें चुरा ले, चाहे जितना दम लगा ले
+            <h3><p>जाने नहीं देंगे तुझे, जाने तुझे देंगे नहीं<br>
+चाहे तुझको बन्दी बुला ले, हम ना बन्दी से डरनेवाले<br>
+सर्कल पर डटके खड़े है हम<br>
+अनकही से नज़रें चुरा ले, चाहे जितना दम लगा ले<br>
 जाने ना तुझको ऐसे देंगे हम</p>
-
-<p><br>जाने नहीं देंगे तुझे, जाने तुझे देंगे नहीं
-कदम का ये सर्कल है रटि पड़ी सारी गज़ल है
-इस कदर इतना मचाया क्यूँ
-सुन ले अनकही की यें बातें, बीतेंगी सब सुनी रातें
-डिग्री अब extend करवाले तु
+<p>जाने नहीं देंगे तुझे, जाने तुझे देंगे नहीं<br>
+कदम का ये सर्कल है रटि पड़ी सारी गज़ल है<br>
+इस कदर इतना मचाया क्यूँ<br>
+सुन ले अनकही की यें बातें, बीतेंगी सब सुनी रातें<br>
+डिग्री अब extend करवाले तु<br>
 जाने नहीं देंगे तुझे, जाने तुझे देंगे नहीं…</p>
 
                 <p><br>These all words are not even close enough to express what we actually feel for you.We learned a lot from you sir. You always have been a inspiration of how hard work and patience can make one achieve all their dreams.</p> 
@@ -329,11 +328,19 @@ May you succeed in all your future endeavors!</h3>
             let increment = 0;
                 
             let items = document.querySelectorAll('.item');
-            let arr = document.getElementsByClassName('description');   
-            items.forEach(item => item.addEventListener('mouseover',showDescription));
-            items.forEach(item => item.addEventListener('mouseout',hideDescription));
-            function showDescription(){ 
+            let arr = document.getElementsByClassName('description');      
                 
+            items.forEach(item => item.addEventListener('mouseover',showDescription));
+            
+            items.forEach(item => item.addEventListener('mouseout',hideDescription));
+                
+            document.onclick = function(e){
+               if(e.target.class !== 'item'){
+                  hideDescription;
+               }
+            };
+                
+            function showDescription(){
                 let z= this.classList.item(1);
                 console.log(z);
                 let num=Number(z);
