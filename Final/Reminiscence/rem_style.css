@@ -53,6 +53,10 @@ li a:hover {
     text-align: center;
     margin-left: 20%;
     top:50%;
+    font-family: 'Lobster Two', cursive;
+
+    line-height: 1.5;
+    font-size:24px;
 }
 
 .pics {
@@ -120,6 +124,7 @@ body {
     line-height:1.3;
     transition: transform 0.4s;
     font-size: 16px;
+    font-family: 'Dosis', sans-serif;
 }
 
 
