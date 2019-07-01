@@ -90,10 +90,10 @@ li a:hover {
 }
 
 .item:hover{
-    transform: scale(2);
+    transform: scale(1.25);
     overflow: visible;
-    border: 5px solid black;
-    border-radius: 50%;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5); 
+    border-radius:50%;
 }
 
 body {
