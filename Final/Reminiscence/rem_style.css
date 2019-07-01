@@ -98,9 +98,8 @@ li a:hover {
 
 body {
     background: #B2FEFA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to left, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size : cover;
     width: 100%;
     overflow-x: hidden;
@@ -125,19 +124,22 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     display:inline-block;
     width:50%;
     float:right;
-    padding:2px;
+    padding:1%;
 }
 
 .description h3 {
     display:inline-block;
     width:50%;
     float:right;
-    padding:2px;
+    padding:1%;
 }
 
 .description img{
-    width:48%;
-    height:100%;
+    width:40%;
+    height:80%;
+    top:10%;
+    left:4%;
     position: absolute;
     display: inline-block;
+    box-shadow: 5px 10px 5px 5px rgba(0,0,0,0.5);
 }
