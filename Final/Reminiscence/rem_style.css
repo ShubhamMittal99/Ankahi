@@ -1,3 +1,7 @@
+.heading{
+    font-size: 16px;
+}
+
 .navbar{
 	position:fixed;
 	width:100%;
@@ -100,7 +104,6 @@ body {
     background: #B2FEFA;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     background-size : cover;
     width: 100%;
     overflow-x: hidden;
@@ -118,6 +121,7 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     z-index:99;
     line-height:1.3;
     transition: transform 0.4s;
+    font-size: 16px;
 }
 
 
@@ -140,4 +144,12 @@ background: linear-gradient(to left, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Fi
     height:100%;
     position: absolute;
     display: inline-block;
+}
+
+.heading{
+    position: fixed;
+    width: 60%;
+    text-align: center;
+    margin-left: 20%;
+    top:50%;
 }
