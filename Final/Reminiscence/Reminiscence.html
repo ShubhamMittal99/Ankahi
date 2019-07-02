@@ -332,13 +332,26 @@ May you succeed in all your future endeavors!</h3>
                 
             items.forEach(item => item.addEventListener('mouseover',showDescription));
             
-            items.forEach(item => item.addEventListener('mouseout',hideDescription));
+            /*items.forEach(item => item.addEventListener('mouseout',hideDescription));*/
                 
-            document.onclick = function(e){
-               if(e.target.class !== 'item'){
-                  hideDescription;
-               }
-            };
+            document.addEventListener('click',function(e){
+                console.log(e.target);
+                console.log(e.target.parentNode);
+                console.log(e.target.parentNode.parentNode);
+                console.log(e.target.tagName=='BODY');
+                if(e.target.classList.item(0)=='description'){}
+                else if(e.target.tagName=='BODY'){
+                    console.log('body part');
+                    hideDescription();
+                }
+                else if(e.target.parentNode.classList.item(0)=='description'){}
+                else if(e.target.parentNode.parentNode.classList.item(0)=='description'){}
+                
+                else{
+                    console.log("Im here");
+                    hideDescription();
+                }
+            })
                 
             function showDescription(){
                 let z= this.classList.item(1);
