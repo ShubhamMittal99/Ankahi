@@ -4,7 +4,7 @@ body{
     /*background-image: linear-gradient(to bottom right, #7fffd4, #89ffff, #bdfdff, #ebfbff, #ffffff);
     background-color: background-image: linear-gradient(to top, #f0f8ff, #f5f9ff, #f9fbff, #fdfdff, #ffffff);
     background-image: linear-gradient(to top, #d7ecff, #e4f0ff, #ffffff,#ffffff, #f0f4ff, #f9f9ff, #ffffff);*/
-    background-image: linear-gradient(to bottom right, #d7ecff, #e4f0ff, #f0f4ff, #f9f9ff, #ffffff);
+    background-image: linear-gradient(to bottom left, #d7ecff, #d7ecff, #d7ecff, #d7ecff, #e4f0ff, #f0f4ff, #f9f9ff, #ffffff);
 }
 
 .navbar{
