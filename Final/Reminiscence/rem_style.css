@@ -125,10 +125,10 @@ body {
     font-size: 16px;
     font-family: 'Dosis', sans-serif;
     overflow-y:scroll;
-    /*animation: appear 0.8s;*/
-    animation: fadeInDown 1s;
+    animation: appear 0.8s;
+    /*animation: fadeInDown 1s;*/
 }
-
+/*
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -142,16 +142,19 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
+*/
 
-/*@keyframes appear {
+@keyframes appear {
     from {height:0;
           width:0;
+		  opacity: 0;
     }
     
     to { height:80%;
     width:65%;
+	opacity:1;
     }
-}*/
+}
 
 
 .description h2{
@@ -177,10 +180,10 @@ body {
     display: inline-block;
     box-shadow: 5px 10px 5px 5px rgba(0,0,0,0.5);
     animation: fadeInDown 1s;
-    /*animation: image 0.8s;*/
+    animation: image 0.8s;
 }
 
-/*@keyframes image{
+@keyframes image{
     from {height:0;
           width:0;
     }
@@ -188,4 +191,4 @@ body {
     to { height:60%;
     width:25%;
     }
-}*/
+}
