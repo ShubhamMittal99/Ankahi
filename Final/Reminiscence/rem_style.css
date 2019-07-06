@@ -125,6 +125,17 @@ body {
     font-size: 16px;
     font-family: 'Dosis', sans-serif;
     overflow-y:scroll;
+    animation: appear 0.8s;
+}
+
+@keyframes appear {
+    from {height:0;
+          width:0;
+    }
+    
+    to { height:80%;
+    width:65%;
+    }
 }
 
 
@@ -150,4 +161,15 @@ body {
     position: fixed;
     display: inline-block;
     box-shadow: 5px 10px 5px 5px rgba(0,0,0,0.5);
+    animation: image 0.8s;
+}
+
+@keyframes image{
+    from {height:0;
+          width:0;
+    }
+    
+    to { height:60%;
+    width:25%;
+    }
 }
