@@ -50,18 +50,19 @@ li a:hover {
 
 
 .ia-container {
-	width: 1235px;
-	margin: 20px auto;
+    position: relative;
+	width: 100%;
+	margin: 0px;
 	overflow: hidden;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.08);
-	border: 7px solid rgba(255,255,255,0.6);
+	/*border: 7px solid rgba(255,255,255,0.6);*/
 }
 
 .ia-container figure {
     position: absolute;
 	top: 0;
-	left: 50px; /* width of visible piece */
-	width: 335px;
+	left: 30px; /* width of visible piece */
+	width: 695px;
     box-shadow: 0 0 0 1px rgba(255,255,255,0.6);
     transition: all 0.3s ease-in-out;
     height: 100%;
@@ -101,7 +102,7 @@ li a:hover {
 }
 
 .ia-container input:checked ~ figure {
-    left: 335px;
+    left: 695px;
     transition: all 0.7s ease-in-out;
 }
 
