@@ -1,14 +1,16 @@
 body {
-      background-color: black;
+      background-color: white;
       color: white;
       font-family: 'Lucida Grande', Verdana, Arial;
       font-size: 12px;
+    /*
       background-image: -webkit-gradient(radial,
                             50% 500, 1,
                             50% 500, 400,
                             from(rgba(255, 255, 255, 0.3)),
                             to(rgba(255, 255, 255, 0)));
-     background-repeat: no-repeat;
+    */ 
+    background-repeat: no-repeat;
     }
 
     #container {
@@ -43,14 +45,13 @@ body {
       text-align: center;
       font-family: Times, serif;
       font-size: 124pt;
-      color: black;
-      background-color: rgba(255, 255, 255, 0.6);
-      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      color: white;
+      background-color: black;
       -webkit-backface-visibility: hidden;
     }
 
     #shape {
-      -webkit-animation: spin 8s infinite linear;
+      -webkit-animation: spin 24s infinite linear;
     }
 
     @-webkit-keyframes spin {
