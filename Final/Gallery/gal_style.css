@@ -65,17 +65,22 @@ li a:hover {
 
     .container {
       width: 100%;
-      height: 700px;
-        border:1px solid black;
-      -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+        /*border: 1px solid black;*/
+      -webkit-perspective: 800; 
       -webkit-perspective-origin: 50% 225px;
     }
 
-.1 {
+.first {
+    position:relative;
+    height:300px;
+    top:80px;
 }
 
-.2 {
-    
+.second {
+    position: relative;
+    top: 90px;
+    /*border:1px solid red;*/
+    height:330px;
 }
     #stage {
       width: 100%;
@@ -86,7 +91,7 @@ li a:hover {
     
     #shape {
       position: relative;
-      top: 160px;
+      top: 100px;
       margin: 0 auto;
       height: 200px;
       width: 200px;
