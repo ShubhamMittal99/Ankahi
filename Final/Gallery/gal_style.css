@@ -11,6 +11,7 @@ body {
                             to(rgba(255, 255, 255, 0)));
     */ 
     background-repeat: no-repeat;
+    overflow: hidden;
     }
 
 .navbar{
@@ -72,15 +73,17 @@ li a:hover {
 
 .first {
     position:relative;
-    height:300px;
-    top:80px;
+    height:45vh;
+    top:4vh;
+    left: 20vw;
 }
 
 .second {
     position: relative;
-    top: 90px;
+    top: 0vh;
     /*border:1px solid red;*/
-    height:330px;
+    height:45vh;
+    right: 20vw;
 }
     #stage {
       width: 100%;
@@ -93,8 +96,8 @@ li a:hover {
       position: relative;
       top: 100px;
       margin: 0 auto;
-      height: 200px;
-      width: 200px;
+      height: 30.5vh;
+      width: 14.6vw;
       -webkit-transform-style: preserve-3d;
     }
     
@@ -119,14 +122,24 @@ img {
     border-radius: 12px;
 }
 
-    #shape {
+    .first #shape {
       -webkit-animation: spin 40s infinite linear;
     }
+
+.second #shape{
+    -webkit-animation: spin_rev 40s infinite linear;
+}
 
     @-webkit-keyframes spin {
       from { -webkit-transform: rotateY(0); }
       to   { -webkit-transform: rotateY(-360deg); }
     }
+
+      @-webkit-keyframes spin_rev {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(360deg); }
+    }   
+
 
     /* ---------- ring styles ------------- */
     .ring > .one {
