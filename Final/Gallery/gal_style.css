@@ -1,5 +1,5 @@
 body {
-      background-color: white;
+      background-color: black;
       color: white;
       font-family: 'Lucida Grande', Verdana, Arial;
       font-size: 12px;
@@ -100,8 +100,8 @@ li a:hover {
     
     .plane {
       position: absolute;
-      height: 200px;
-      width: 200px;
+      height: 220px;
+      width: 360px;
       border: 1px solid white;
       -webkit-border-radius: 12px;
       -webkit-box-sizing: border-box;
@@ -113,8 +113,14 @@ li a:hover {
       -webkit-backface-visibility: hidden;
     }
 
+img {
+    height:100%;
+    width:100%;
+    border-radius: 12px;
+}
+
     #shape {
-      -webkit-animation: spin 24s infinite linear;
+      -webkit-animation: spin 40s infinite linear;
     }
 
     @-webkit-keyframes spin {
@@ -124,49 +130,49 @@ li a:hover {
 
     /* ---------- ring styles ------------- */
     .ring > .one {
-      -webkit-transform: translateZ(380px);
+      -webkit-transform: translateZ(700px);
     }
 
     .ring > .two {
-      -webkit-transform: rotateY(30deg) translateZ(380px);
+      -webkit-transform: rotateY(30deg) translateZ(700px);
     }
 
     .ring > .three {
-      -webkit-transform: rotateY(60deg) translateZ(380px);
+      -webkit-transform: rotateY(60deg) translateZ(700px);
     }
 
     .ring > .four {
-      -webkit-transform: rotateY(90deg) translateZ(380px);
+      -webkit-transform: rotateY(90deg) translateZ(700px);
     }
 
     .ring > .five {
-      -webkit-transform: rotateY(120deg) translateZ(380px);
+      -webkit-transform: rotateY(120deg) translateZ(700px);
     }
 
     .ring > .six {
-      -webkit-transform: rotateY(150deg) translateZ(380px);
+      -webkit-transform: rotateY(150deg) translateZ(700px);
     }
 
     .ring > .seven {
-      -webkit-transform: rotateY(180deg) translateZ(380px);
+      -webkit-transform: rotateY(180deg) translateZ(700px);
     }
 
     .ring > .eight {
-      -webkit-transform: rotateY(210deg) translateZ(380px);
+      -webkit-transform: rotateY(210deg) translateZ(700px);
     }
 
     .ring > .nine {
-      -webkit-transform: rotateY(240deg) translateZ(380px);
+      -webkit-transform: rotateY(240deg) translateZ(700px);
     }
 
     .ring > .ten {
-      -webkit-transform: rotateY(270deg) translateZ(380px);
+      -webkit-transform: rotateY(270deg) translateZ(700px);
     }
 
     .ring > .eleven {
-      -webkit-transform: rotateY(300deg) translateZ(380px);
+      -webkit-transform: rotateY(300deg) translateZ(700px);
     }
 
     .ring > .twelve {
-      -webkit-transform: rotateY(330deg) translateZ(380px);
+      -webkit-transform: rotateY(330deg) translateZ(700px);
     }
