@@ -70,5 +70,33 @@
           for(i=0;i<stage.length;i++){
 			  stage[i].style.webkitTransform = 'translateZ(-620px)';
           }
+        
+        var planes = document.querySelectorAll(".plane");
+        
+        for(i=0;i<planes.length;i++) {
+            
+        
+        planes[i].onclick = function(){
+            
+            console.log(this.parentNode.parentNode.parentNode);
+            var rings = document.querySelectorAll(".ring");
+            
+            if(this.parentNode.parentNode.parentNode.classList.item(1)==="first") {
+            if(rings[0].style.webkitAnimationPlayState==="paused"){
+                rings[0].style.webkitAnimationPlayState="running";
+            }
+            else{
+                rings[0].style.webkitAnimationPlayState="paused";
+            }}
+            
+            if(this.parentNode.parentNode.parentNode.classList.item(1)==="second") {
+            if(rings[1].style.webkitAnimationPlayState==="paused"){
+                rings[1].style.webkitAnimationPlayState="running";
+            }
+            else{
+                rings[1].style.webkitAnimationPlayState="paused";
+            }
+        }
+        }}
    </script>
 </html>
