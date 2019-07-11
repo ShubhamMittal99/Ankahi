@@ -83,7 +83,7 @@ li a:hover {
     top: 0vh;
     /*border:1px solid red;*/
     height:45vh;
-    right: 20vw;
+    right: 25vw;
 }
     #stage {
       width: 100%;
@@ -189,3 +189,73 @@ img {
     .ring > .twelve {
       -webkit-transform: rotateY(330deg) translateZ(700px);
     }
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.wrapper1{
+    position:absolute;
+    top:30vh;
+    left:10vw;
+    text-align:center;
+    margin:0px auto;
+    z-index: 1000;
+}
+
+.wrapper2{
+    position:absolute;
+    top:75vh;
+    right:13vw;
+    text-align:center;
+    margin:0px auto;
+    z-index: 1000;
+}
+
+.tabs{
+  /*margin-top:50px;*/
+  font-size:15px;
+  padding:0px;
+  list-style:none;
+  background:#fff;
+  opacity: 0.5;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  display:inline-block;
+  border-radius:50px;
+  position:relative;
+}
+
+.tabs a{
+  text-decoration:none;
+  color: #777;
+  text-transform:uppercase;
+  padding:10px 20px;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+}
+
+.tabs a .active{
+  color:white;
+}
+
+.tabs a i{
+  margin-right:5px;
+}
+
+.tabs .selector{
+  height:100%;
+  display:inline-block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:1;
+  border-radius:50px;
+  transition-duration:0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  background: #05abe0;
+  background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+}
