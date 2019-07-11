@@ -28,9 +28,9 @@
         
         <div class="wrapper1">
         
-        <nav class="tabs">
-            <div class="selector"></div>
-            <a href="#" class="1 active">2016-2017</a>
+        <nav class="tabs1">
+            <div class="selector1"></div>
+            <a href="#" class="1 active1">2016-2017</a>
             <a href="#" class="2">2017-2018</a>
         </nav>
         
@@ -38,9 +38,9 @@
         
         <div class="wrapper2">
         
-        <nav class="tabs">
-            <div class="selector"></div>
-            <a href="#" class="1 active">2018-2019</a>
+        <nav class="tabs2">
+            <div class="selector2"></div>
+            <a href="#" class="1 active2">2018-2019</a>
             <a href="#" class="2">2019-2020</a>
         </nav>
         
@@ -143,33 +143,56 @@
                     var timeStringFull = shapes[1].style.WebkitAnimationDuration;
                     var timeString = timeStringFull.substring(0,timeStringFull.length-1);
                     var time = Number(timeString);
-                    if(time>10){
+                    /*if(time>10){
                     time = time-10;
-                    shapes[1].style.WebkitAnimationDuration = time+'s';
-                }
+                    shapes[1].style.WebkitAnimationDuration = time+'s';}*/
+                    shapes[1].style.WebkitAnimationDuration = (time/(time*0.2)+1)+'s';
+                
                 }
             }
         }
         
         //tabs
         
-        var tabs = $('.tabs');
-var selector = $('.tabs').find('a').length;
+        var tabs = $('.tabs1');
+var selector = $('.tabs1').find('a').length;
 //var selector = $(".tabs").find(".selector");
-var activeItem = tabs.find('.active');
+var activeItem = tabs.find('.active1');
 var activeWidth = activeItem.innerWidth();
-$(".selector").css({
+$(".selector1").css({
   "left": activeItem.position.left + "px", 
   "width": activeWidth + "px"
 });
 
-$(".tabs").on("click","a",function(e){
+$(".tabs1").on("click","a",function(e){
   e.preventDefault();
-  $('.tabs a').removeClass("active");
-  $(this).addClass('active');
+  $('.tabs1 a').removeClass("active1");
+  $(this).addClass('active1');
   var activeWidth = $(this).innerWidth();
   var itemPos = $(this).position();
-  $(".selector").css({
+  $(".selector1").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+  });
+});
+        
+        var tabs = $('.tabs2');
+var selector = $('.tabs2').find('a').length;
+//var selector = $(".tabs").find(".selector");
+var activeItem = tabs.find('.active2');
+var activeWidth = activeItem.innerWidth();
+$(".selector2").css({
+  "left": activeItem.position.left + "px", 
+  "width": activeWidth + "px"
+});
+
+$(".tabs2").on("click","a",function(e){
+  e.preventDefault();
+  $('.tabs2 a').removeClass("active2");
+  $(this).addClass('active2');
+  var activeWidth = $(this).innerWidth();
+  var itemPos = $(this).position();
+  $(".selector2").css({
     "left":itemPos.left + "px", 
     "width": activeWidth + "px"
   });
