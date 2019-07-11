@@ -66,7 +66,6 @@ li a:hover {
 
     .container {
       width: 100%;
-        /*border: 1px solid black;*/
       -webkit-perspective: 800; 
       -webkit-perspective-origin: 50% 225px;
     }
@@ -120,14 +119,6 @@ img {
     height:100%;
     width:100%;
     border-radius: 12px;
-}
-
-    .first #shape {
-      -webkit-animation: spin 40s infinite linear;
-    }
-
-.second #shape{
-    -webkit-animation: spin_rev 40s infinite linear;
 }
 
     @-webkit-keyframes spin {
@@ -262,9 +253,22 @@ img {
 
 .upper {
     position: absolute;
-    top: 47vh;
-    left: 39vw;
+    top: 54vh;
+    left: 95vw;
     background-color: gray;
     border: 1px white solid;
     border-radius: 1px;
+}
+
+.lower {
+    position: absolute;
+    top: 93vh;
+    left: 3vw;
+    background-color: gray;
+    border: 1px white solid;
+    border-radius: 1px;
+}
+
+.fast:hover {
+    cursor: pointer;
 }

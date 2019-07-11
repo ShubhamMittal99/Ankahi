@@ -22,6 +22,7 @@
         <!-- Bro yahan pe navbar daal de sirf 2 years ki 18-19 aur 17-18. Bakki 2 years ki navbar neeeche waale ke right mein ayegi-->
         
         <!--Also, internet pe px to vw aur px to vh converters mil jaate hain. use kar liyo-->
+        
         <div class="fast upper">>></div>
         <div class="fast lower">>></div>
         
@@ -47,7 +48,7 @@
         
         <div class="container first">
             <div id="stage">
-                <div id="shape" class="ring">
+                <div id="shape" class="ring" style="animation: spin infinite 40s linear;">
                     <div class="plane one"><img src = "images/gall1.jpg"></div>
                     <div class="plane two"><img src = "images/gall2.jpg"></div>
                     <div class="plane three"><img src = "images/gall3.jpg"></div>
@@ -66,7 +67,7 @@
         
         <div class="container second">
             <div id="stage">
-                <div id="shape" class="ring">
+                <div id="shape" class="ring" style="animation: spin_rev infinite 40s linear;">
                     <div class="plane one"><img src = "images/gall1%20-%202.jpg"></div>
                     <div class="plane two"><img src = "images/gall2%20-%202.jpg"></div>
                     <div class="plane three"><img src = "images/gall3%20-%202.jpg"></div>
@@ -85,11 +86,14 @@
         
         
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
           var stage = document.querySelectorAll('#stage');
           for(i=0;i<stage.length;i++){
 			  stage[i].style.webkitTransform = 'translateZ(-620px)';
           }
+        
+        //Pause-Play
         
         var planes = document.querySelectorAll(".plane");
         
@@ -98,7 +102,6 @@
         
         planes[i].onclick = function(){
             
-            console.log(this.parentNode.parentNode.parentNode);
             var rings = document.querySelectorAll(".ring");
             
             if(this.parentNode.parentNode.parentNode.classList.item(1)==="first") {
@@ -118,5 +121,58 @@
             }
         }
         }}
+        
+        //Fast-forward buttons 
+        
+        var fasts = document.querySelectorAll(".fast");
+        
+        for(i=0;i<fasts.length;i++){
+            
+            fasts[i].onclick = function(){
+                var shapes = document.querySelectorAll("#shape");
+                if(this.classList.item(1)==="upper"){
+                    var timeStringFull = shapes[0].style.WebkitAnimationDuration;
+                    var timeString = timeStringFull.substring(0,timeStringFull.length-1);
+                    var time = Number(timeString);
+                    if(time>10){
+                    time = time-10;
+                    shapes[0].style.WebkitAnimationDuration = time+'s';
+                }}
+                
+                else{
+                    var timeStringFull = shapes[1].style.WebkitAnimationDuration;
+                    var timeString = timeStringFull.substring(0,timeStringFull.length-1);
+                    var time = Number(timeString);
+                    if(time>10){
+                    time = time-10;
+                    shapes[1].style.WebkitAnimationDuration = time+'s';
+                }
+                }
+            }
+        }
+        
+        //tabs
+        
+        var tabs = $('.tabs');
+var selector = $('.tabs').find('a').length;
+//var selector = $(".tabs").find(".selector");
+var activeItem = tabs.find('.active');
+var activeWidth = activeItem.innerWidth();
+$(".selector").css({
+  "left": activeItem.position.left + "px", 
+  "width": activeWidth + "px"
+});
+
+$(".tabs").on("click","a",function(e){
+  e.preventDefault();
+  $('.tabs a').removeClass("active");
+  $(this).addClass('active');
+  var activeWidth = $(this).innerWidth();
+  var itemPos = $(this).position();
+  $(".selector").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+  });
+});
    </script>
 </html>
