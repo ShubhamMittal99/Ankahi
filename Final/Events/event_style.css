@@ -1,3 +1,53 @@
+.navbar{
+	position:fixed;
+	width:100%;
+	z-index: 100;
+}
+
+.navbar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:#333;
+}
+
+.navbar li{
+	display:inline-block;
+}
+
+.navbar a {
+  display: block;
+  position:relative;
+  bottom:20px;
+  color: white;
+  text-align: center;
+  padding: 15px 80px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.navbar li:first-child{
+	width:100px;
+	height:50px;
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+.navbar img{
+	height:100%;
+	width:100%;
+}
+
+.navbar li:nth-child(2){
+	margin-left:100px;
+}
+
 .cn-container{
 	width: 60%;
 	min-width: 300px;
@@ -5,6 +55,7 @@
 	margin: 10px auto 0 auto;
 	text-align: left;
 	position: relative;
+    top:17vh;
 }
 .cn-container h2{
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
