@@ -37,6 +37,18 @@
 					
 				</nav>
 			</header>
+            
+            <div class="wrapper">
+        
+        <nav class="tabs">
+            <div class="selector"></div>
+            <a href="events.html#slide-main" class="1 active">2016-2017</a>
+            <a href="#" class="2">2017-2018</a>
+            <a href="#" class="3">2018-2019</a>
+            <a href="#" class="4">2019-2020</a>
+        </nav>
+        
+    </div>
 			<!--[if lte IE 9]>
 			<p style="font-size: 20px; padding: 50px;">Sorry, this only works in modern browsers...</p>
 			<![endif]-->
@@ -209,4 +221,46 @@
 			</section>
         </div>
     </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        var tabs = $('.tabs');
+        //var sets = document.querySelectorAll(".ia-container");
+        var selector = $('.tabs').find('a').length;
+        var activeItem = tabs.find('.active');
+        //var initial = document.querySelector(".active");
+        var activeWidth = activeItem.innerWidth();
+        //var x = initial.classList.item(0);
+        //sets[x-1].style.display="block";
+        
+        $(".selector").css({
+            "left": activeItem.position.left + "px", 
+            "width": activeWidth + "px"
+        });
+
+        $(".tabs").on("click","a",function(e){
+            
+            e.preventDefault();
+            $('.tabs a').removeClass("active");
+            //var num = this.classList.item(0);
+            $(this).addClass('active');
+            
+            /*var sets = document.querySelectorAll(".ia-container");
+            var set = sets[num-1];
+            for(i=0;i<sets.length;i++){
+                sets[i].style.display="none";
+            }
+            set.style.display="block";*/
+            
+            var activeWidth = $(this).innerWidth();
+            var itemPos = $(this).position();
+            
+            $(".selector").css({
+                "left":itemPos.left + "px", 
+                "width": activeWidth + "px"
+            });
+        });
+        
+    </script>
 </html>
