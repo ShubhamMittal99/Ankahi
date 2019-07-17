@@ -68,7 +68,6 @@ ul.tabs{
   max-height: 4.64vh;
   overflow: hidden;
   display: inline-block;
-  /*padding-right: 1.302vw;*/
 }
 
 ul.tabs > li.active{
@@ -88,8 +87,8 @@ ul.tabs > li.active:after{
 ul.tabs > li{
   float : right;
     margin: 0.325vw -0.651vw 0; 
-  border-top-right-radius: 25px 170px;
-  border-top-left-radius: 20px 90px;
+  border-top-right-radius: 1.627vw 22.546vh;
+  border-top-left-radius: 1.302vw 11.936vh;
   padding : 0 1.953vw 0 1.627vw;
   height: 22.54vh;
   background: #ddd;
