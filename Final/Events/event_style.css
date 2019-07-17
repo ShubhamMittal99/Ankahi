@@ -55,7 +55,6 @@ li a:hover {
 .tab-container{
   margin: 0;
   padding: 0;
-  max-height: 4.64vh;
   display:  block;
   position: absolute;
   top: 30vh;
@@ -69,7 +68,7 @@ ul.tabs{
   max-height: 4.64vh;
   overflow: hidden;
   display: inline-block;
-  padding-right: 1.302vw;
+  /*padding-right: 1.302vw;*/
 }
 
 ul.tabs > li.active{
@@ -96,7 +95,7 @@ ul.tabs > li{
   background: #ddd;
   position : relative;
   box-shadow: 0 10px 20px rgba(0,0,0,.5);
-  width: 50vw;
+  width: 51vw;
   box-sizing: border-box;
 }
 
@@ -116,7 +115,7 @@ ul.tabs > li:before, ul.tabs > li:after{
   height: 2.65vh;
   width: 1.302vw;
   border-radius: 100%;
-  border-width: 10px;
+  border-width: 0.732vw;
   top: 0px;
   border-style : solid;
   position : absolute;
