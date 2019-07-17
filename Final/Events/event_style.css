@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .navbar{
 	position:fixed;
 	width:100%;
@@ -51,7 +55,7 @@ li a:hover {
 .tab-container{
   margin: 0;
   padding: 0;
-  max-height: 35px;
+  max-height: 4.64vh;
   display:  block;
   position: absolute;
   top: 30vh;
@@ -61,11 +65,11 @@ li a:hover {
 ul.tabs{
   margin: 0;
   list-style-type : none;
-  line-height : 35px;
-  max-height: 35px;
+  line-height : 4.64vh;
+  max-height: 4.64vh;
   overflow: hidden;
   display: inline-block;
-  padding-right: 20px
+  padding-right: 1.302vw;
 }
 
 ul.tabs > li.active{
@@ -84,17 +88,18 @@ ul.tabs > li.active:after{
 
 ul.tabs > li{
   float : right;
-  margin : 5px -10px 0;
+    margin: 0.325vw -0.651vw 0; 
   border-top-right-radius: 25px 170px;
   border-top-left-radius: 20px 90px;
-  padding : 0 30px 0 25px;
-  height: 170px;
+  padding : 0 1.953vw 0 1.627vw;
+  height: 22.54vh;
   background: #ddd;
   position : relative;
   box-shadow: 0 10px 20px rgba(0,0,0,.5);
   width: 50vw;
   box-sizing: border-box;
 }
+
 
 ul.tabs > li > a{
   display: inline-block;
@@ -108,8 +113,8 @@ ul.tabs > li > a{
 ul.tabs > li:before, ul.tabs > li:after{
   content : '';
   background : transparent;
-  height: 20px;
-  width: 20px;
+  height: 2.65vh;
+  width: 1.302vw;
   border-radius: 100%;
   border-width: 10px;
   top: 0px;
@@ -120,11 +125,11 @@ ul.tabs > li:before, ul.tabs > li:after{
 ul.tabs > li:before{
   border-color : transparent #ddd transparent transparent;
   -webkit-transform : rotate(48deg);
-  left: -23px;
+  left: -1.497vw;
 }
 
 ul.tabs > li:after{
   border-color : transparent transparent transparent #ddd;
   -webkit-transform : rotate(-48deg);
-  right: -17px;
+  right: -1.106vw;
 }
