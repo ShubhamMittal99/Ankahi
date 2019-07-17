@@ -21,26 +21,39 @@
         
         <div class="tab-container">
             <ul class="tabs" >
-                <li><a href = # >Intra-College Events</a> </li>
-                <li class="active" > <a href=# >Inter-College Events</a> </li>
+                <li class="first"><a href = # >Intra-College Events</a> </li>
+                <li class=" second active" > <a href=# >Inter-College Events</a> </li>
             </ul>
         </div>
         
-        <div id="inter">
+        <div id="inter" class="info">
             
         </div>
         
-        <div id = "intra">
+        <div id = "intra" class="info">
         
         </div>
     </body>
     <script src="jquery.js"></script>
     <script>
         var tabs = $('.tabs > li');
+        var myTabs = document.querySelectorAll(".tabs > li");
+        var infos= document.querySelectorAll(".info");
         tabs.on("click", function(){
             tabs.removeClass('active');
             $(this).addClass('active');
+            infos[0].style.visibility="hidden";
+            infos[1].style.visibility="hidden";
+            if(this.classList.item(0)=="first"){
+                infos[0].style.visibility="visible";
+            }
+            else{
+                infos[1].style.visibility="visible";
+            }
         }
-        );
+        )
+        
+        
+        ;
     </script>
 </html>

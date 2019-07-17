@@ -88,6 +88,7 @@ ul.tabs > li.active:after{
 ul.tabs > li{
   text-align: center;
   float : right;
+    z-index:100000;
   margin: 0.325vw -0.651vw 0; 
   border-top-right-radius: 1.627vw 22.546vh;
   border-top-left-radius: 1.302vw 11.936vh;
