@@ -62,7 +62,7 @@ li a:hover {
   width: 100vw;
 }
 
-ul.tabs{
+ul.switch{
   margin: 0;
   list-style-type : none;
   line-height : 4.64vh;
@@ -71,21 +71,21 @@ ul.tabs{
   display: inline-block;
 }
 
-ul.tabs > li.active{
+ul.switch > li.active{
   z-index: 2;
   background: #efefef;
 }
 
-ul.tabs > li.active:before{
+ul.switch > li.active:before{
   border-color : transparent #efefef transparent transparent;
 }
 
 
-ul.tabs > li.active:after{
+ul.switch > li.active:after{
   border-color : transparent transparent transparent #efefef;
 }
 
-ul.tabs > li{
+ul.switch > li{
   text-align: center;
   float : right;
     z-index:100000;
@@ -102,7 +102,7 @@ ul.tabs > li{
 }
 
 
-ul.tabs > li > a{
+ul.switch > li > a{
   display: inline-block;
   max-width:100%;
   overflow: hidden;
@@ -111,7 +111,7 @@ ul.tabs > li > a{
   color: #222;
 }
 
-ul.tabs > li:before, ul.tabs > li:after{
+ul.switch > li:before, ul.switch > li:after{
   content : '';
   background : transparent;
   height: 2.65vh;
@@ -123,13 +123,13 @@ ul.tabs > li:before, ul.tabs > li:after{
   position : absolute;
 }
 
-ul.tabs > li:before{
+ul.switch > li:before{
   border-color : transparent #ddd transparent transparent;
   -webkit-transform : rotate(48deg);
   left: -1.497vw;
 }
 
-ul.tabs > li:after{
+ul.switch > li:after{
   border-color : transparent transparent transparent #ddd;
   -webkit-transform : rotate(-48deg);
   right: -1.106vw;
@@ -147,4 +147,65 @@ ul.tabs > li:after{
     height: 40vh;
     background-color: white;
     visibility: hidden;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.wrapper{
+    position:absolute;
+    top:92vh;
+    left:35vw;
+  text-align:center;
+  margin:0px auto;
+}
+
+.tabs{
+  /*margin-top:50px;*/
+  font-size:15px;
+  padding:0px;
+  list-style:none;
+  background:#fff;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  display:inline-block;
+  border-radius:50px;
+  position:relative;
+}
+
+.tabs a{
+  text-decoration:none;
+  color: #777;
+  text-transform:uppercase;
+  padding:10px 20px;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+}
+
+.tabs a.active{
+  color:#fff;
+}
+
+.tabs a i{
+  margin-right:5px;
+}
+
+.tabs .selector{
+  height:100%;
+  display:inline-block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:1;
+  border-radius:50px;
+  transition-duration:0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  background: #05abe0;
+  background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
 }

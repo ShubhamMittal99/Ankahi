@@ -20,7 +20,7 @@
 		</div>
         
         <div class="tab-container">
-            <ul class="tabs" >
+            <ul class="switch" >
                 <li class="first"><a href = # >Intra-College Events</a> </li>
                 <li class=" second active" > <a href=# >Inter-College Events</a> </li>
             </ul>
@@ -33,14 +33,23 @@
         <div id = "intra" class="info">
         
         </div>
+        
+        <nav class="tabs">
+            <div class="selector"></div>
+            <a href="#" class="1 active">2016-2017</a>
+            <a href="#" class="2">2017-2018</a>
+            <a href="#" class="3">2018-2019</a>
+            <a href="#" class="4">2019-2020</a>
+        </nav>
+        
     </body>
     <script src="jquery.js"></script>
     <script>
-        var tabs = $('.tabs > li');
-        var myTabs = document.querySelectorAll(".tabs > li");
+        var switches = $('.switch > li');
+        var mySwitches = document.querySelectorAll(".switch > li");
         var infos= document.querySelectorAll(".info");
-        tabs.on("click", function(){
-            tabs.removeClass('active');
+        switches.on("click", function(){
+            switches.removeClass('active');
             $(this).addClass('active');
             infos[0].style.visibility="hidden";
             infos[1].style.visibility="hidden";
@@ -50,10 +59,30 @@
             else{
                 infos[1].style.visibility="visible";
             }
-        }
-        )
+        });
         
+        var tabs = $('.tabs');
+        var selector = $('.tabs').find('a').length;
+        var activeItem = tabs.find('.active');
+        var activeWidth = activeItem.innerWidth();
         
-        ;
+        $(".selector").css({
+            "left": activeItem.position.left + "px", 
+            "width": activeWidth + "px"
+        });
+
+        $(".tabs").on("click","a",function(e){
+            
+            e.preventDefault();
+            $('.tabs a').removeClass("active");
+            $(this).addClass('active');
+            var activeWidth = $(this).innerWidth();
+            var itemPos = $(this).position();
+            
+            $(".selector").css({
+                "left":itemPos.left + "px", 
+                "width": activeWidth + "px"
+            });
+        });
     </script>
 </html>
