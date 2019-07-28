@@ -22,18 +22,43 @@
         <div class="tab-container">
             <ul class="switch" >
                 <li class="first"><a href = # >Intra-College Events</a> </li>
-                <li class=" second active" > <a href=# >Inter-College Events</a> </li>
+                <li class="second active" > <a href=# >Inter-College Events</a> </li>
             </ul>
         </div>
         
-        <div id="inter" class="info">
+        <div class="inter info f">
             
         </div>
         
-        <div id = "intra" class="info">
+        <div class = "intra info f">
         
         </div>
         
+        <div class="inter info u">
+            
+        </div>
+        
+        <div class = "intra info u">
+        
+        </div>
+        
+        <div class="inter info c">
+            
+        </div>
+        
+        <div class = "intra info c">
+        
+        </div>
+        
+        <div class="inter info k">
+            
+        </div>
+        
+        <div class = "intra info k">
+        
+        </div>
+        
+        <div class = "wrapper">
         <nav class="tabs">
             <div class="selector"></div>
             <a href="#" class="1 active">2016-2017</a>
@@ -41,23 +66,33 @@
             <a href="#" class="3">2018-2019</a>
             <a href="#" class="4">2019-2020</a>
         </nav>
+        </div>
         
     </body>
     <script src="jquery.js"></script>
     <script>
         var switches = $('.switch > li');
         var mySwitches = document.querySelectorAll(".switch > li");
-        var infos= document.querySelectorAll(".info");
+        var infos = document.querySelectorAll(".info");
+        var play = {
+            first: infos[0],
+            second: infos[1],
+        };
+        
+        for(i=2; i<infos.length;i++){
+            
+            infos[i].style.display="none";
+        }
         switches.on("click", function(){
             switches.removeClass('active');
             $(this).addClass('active');
-            infos[0].style.visibility="hidden";
-            infos[1].style.visibility="hidden";
+            play.first.style.display="none";
+            play.second.style.display="none";
             if(this.classList.item(0)=="first"){
-                infos[0].style.visibility="visible";
+                play.first.style.display="block";
             }
             else{
-                infos[1].style.visibility="visible";
+                play.second.style.display="block";
             }
         });
         
@@ -70,12 +105,25 @@
             "left": activeItem.position.left + "px", 
             "width": activeWidth + "px"
         });
-
+        
         $(".tabs").on("click","a",function(e){
-            
             e.preventDefault();
             $('.tabs a').removeClass("active");
             $(this).addClass('active');
+            
+            var x = this.classList.item(0);
+            var y = Number(x);
+            console.log;
+            play.first = infos[2*x-2];
+            play.second = infos[2*x-1];
+            play.second.style.display="none";
+            play.first.style.display="block";
+            for(i=0; i<infos.length;i++){
+                if(i!=(2*x-1) && i!=(2*x-2)){
+                    infos[i].style.display="none";
+                }
+            }
+            
             var activeWidth = $(this).innerWidth();
             var itemPos = $(this).position();
             

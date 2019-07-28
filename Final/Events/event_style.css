@@ -1,5 +1,5 @@
 body{
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #333;
 }
 
@@ -60,6 +60,7 @@ li a:hover {
   position: absolute;
   top: 12.8vh;
   width: 100vw;
+    left: 0.01vw;
 }
 
 ul.switch{
@@ -69,6 +70,7 @@ ul.switch{
   max-height: 4.64vh;
   overflow: hidden;
   display: inline-block;
+  min-width: 100vw;
 }
 
 ul.switch > li.active{
@@ -97,7 +99,7 @@ ul.switch > li{
   background: #ddd;
   position : relative;
   box-shadow: 0 10px 20px rgba(0,0,0,.5);
-  width: 51vw;
+  width: 51.2vw;
   box-sizing: border-box;
 }
 
@@ -129,27 +131,43 @@ ul.switch > li:before{
   left: -1.497vw;
 }
 
+
+
 ul.switch > li:after{
   border-color : transparent transparent transparent #ddd;
   -webkit-transform : rotate(-48deg);
   right: -1.106vw;
 }
 
-#inter{
+.inter{
     width: 100%;
-    height: 40vh;
-    background-color: white;
-    visibility: visible;
+    height: 110vh;
+    position: relative;
+    top: 17vh;
 }
 
-#intra{
+.intra{
     width: 100%;
-    height: 40vh;
-    background-color: white;
-    visibility: hidden;
+    height: 110vh;
+    position: relative;
+    top: 17vh;
 }
 
+.f {
+    background-color: orange;
+}
 
+.u{
+    background-color: white;
+}
+
+.c{
+    background-color: green;
+}
+
+.k{
+    background-color: blue;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -159,6 +177,7 @@ ul.switch > li:after{
     left:35vw;
   text-align:center;
   margin:0px auto;
+    display: block;
 }
 
 .tabs{
