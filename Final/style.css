@@ -20,8 +20,11 @@ header h1{
 }
 
 #logo_container{
-    height: 15vh;
-    width: 20vh;
+    position: absolute;
+    left: 2vw;
+    top: 1vh;
+    height: 12vh;
+    width: 10vw;
     display: inline-block;
 }
 
@@ -88,6 +91,7 @@ li a:hover {
 	background-image: url("images/IMG_0390.jpg");
 }
 
+/*
 .heading{
 	position: relative;
 	bottom:400px;
@@ -116,10 +120,9 @@ li a:hover {
 	line-height: 1.4;
 	font-family: 'Poppins', sans-serif;
 }
-
+*/
 .Testimonials{
 	position: relative;
-	bottom: 210px;
 	max-height: 600px;
 	overflow: hidden;
 	/*background-color: #2d3436;
@@ -208,7 +211,6 @@ li a:hover {
 .upcoming{
 	padding-left: 1%;
 	position: relative;
-	bottom: 20vh;
 	font-family: 'Poppins', sans-serif;
 	max-width:95%;
     background-position: 50% 50%;
@@ -219,7 +221,6 @@ li a:hover {
 	text-align: left;
 	font-size: 30px;
 	position: relative;
-	bottom: 30px;
 	left: 2.5%;
 	font-weight: bold;
     margin-bottom: 30px;
