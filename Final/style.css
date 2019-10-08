@@ -1,14 +1,13 @@
 body{
 	margin-bottom:-100px;
 	padding-bottom:200px;
-    /*background-image: linear-gradient(to bottom right, #7fffd4, #89ffff, #bdfdff, #ebfbff, #ffffff);
-    background-color: background-image: linear-gradient(to top, #f0f8ff, #f5f9ff, #f9fbff, #fdfdff, #ffffff);
-    background-image: linear-gradient(to top, #d7ecff, #e4f0ff, #ffffff,#ffffff, #f0f4ff, #f9f9ff, #ffffff);*/
+    overflow-x: hidden;
     background-image: linear-gradient(to bottom left, #d7ecff, #d7ecff, #d7ecff, #d7ecff, #e4f0ff, #f0f4ff, #f9f9ff, #ffffff);
 }
 
 .navbar{
-	position:fixed;
+    top:15vh;
+	position: absolute;
 	width:100%;
 	z-index: 100;
 }
@@ -19,6 +18,7 @@ body{
 	padding: 0;
 	overflow: hidden;
 	background-color:#333;
+    height: 8vh;
 }
 
 .navbar li{
@@ -71,6 +71,7 @@ li a:hover {
 }
 
 .slideshow{
+    top: 15vh;
 	max-width:100%;
 	position:relative;
 	z-index:-1;
