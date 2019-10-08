@@ -8,7 +8,6 @@ body{
 .header{
     background-color: black;
     z-index: 1;
-    border: 1px solid red;
     height: 15vh;
 }
 
@@ -88,8 +87,11 @@ li a:hover {
 
 .slideshow{
 	width: 70vw;
+    height: 56vh;
+    left: 15vw;
 	position: relative;
 	z-index:-1;
+    overflow:hidden;
 	background-size: 100% 100%;
 	background-image: url("images/IMG_0390.jpg");
 }
@@ -124,6 +126,37 @@ li a:hover {
 	font-family: 'Poppins', sans-serif;
 }
 */
+.page-links{
+    list-style-type: none;
+	margin: 2vh;
+	padding: 0;
+	overflow: hidden;
+    height: 8vh;
+}
+
+.page-links li{
+	display:inline-block;
+    position: relative;
+    left:15vw;
+}
+
+.page-links a{
+  display: block;
+  position: relative;
+  color: black;
+  text-align: center;
+  padding: 3vh 5.5vw;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.5s;
+}
+
+li a:hover {
+    background-color: #111;
+    color: white;
+    transition: 0.5s;
+}
+
 .Testimonials{
 	position: relative;
 	max-height: 600px;
