@@ -5,11 +5,14 @@ body{
     background-image: linear-gradient(to bottom left, #d7ecff, #d7ecff, #d7ecff, #d7ecff, #e4f0ff, #f0f4ff, #f9f9ff, #ffffff);
 }
 
-header{
-    background: black;
+.header{
+    background-color: black;
+    z-index: 1;
+    border: 1px solid red;
+    height: 15vh;
 }
 
-header h1{
+.header h1{
     color: white;
     font-size: 10vh;
     font-family: 'Mansalva', cursive;
@@ -84,7 +87,7 @@ li a:hover {
 }
 
 .slideshow{
-	max-width:100%;
+	width: 70vw;
 	position: relative;
 	z-index:-1;
 	background-size: 100% 100%;
