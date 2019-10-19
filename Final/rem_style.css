@@ -1,5 +1,36 @@
+.header{
+    background-color: black;
+    z-index: 1;
+    height: 15vh;
+}
+
+.header h1{
+    color: white;
+    font-size: 10vh;
+    font-family: 'Mansalva', cursive;
+    display: inline-block;
+    position: absolute;
+    left: 40vw;
+    top: 2vh;
+}
+
+#logo_container{
+    position: absolute;
+    left: 2vw;
+    top: 1vh;
+    height: 12vh;
+    width: 10vw;
+    display: inline-block;
+}
+
+#logo_container img{
+	height:100%;
+	width:100%;
+}
+
 .navbar{
-	position:fixed;
+    top:15vh;
+	position: absolute;
 	width:100%;
 	z-index: 100;
 }
@@ -8,45 +39,31 @@
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	overflow: visible;
-	background-color:#333;
+	overflow: hidden;
+	background-color: white;
+    height: 8vh;
 }
 
 .navbar li{
 	display:inline-block;
 }
 
-.navbar a {
+.navbar a{
   display: block;
-  position:relative;
-  bottom:20px;
-  color: white;
+  position: relative;
+  color: black;
   text-align: center;
-  padding: 15px 80px;
+  padding: 3vh 5.5vw;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  transition: 0.5s;
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
+    color: white;
+    transition: 0.5s;
 }
-
-.navbar li:first-child{
-	width:100px;
-	height:50px;
-	overflow:visible;
-	margin-top:20px;
-	margin-left:30px;
-}
-
-.navbar img{
-	width:100%;
-}
-
-.navbar li:nth-child(2){
-	margin-left:100px;
-}
-
 .heading{
     position: fixed;
     width: 60%;
