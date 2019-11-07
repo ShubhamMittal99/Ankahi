@@ -1,10 +1,41 @@
 body{
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
+}
+
+.header{
+    background-color: black;
+    z-index: 1;
+    height: 15vh;
+}
+
+.header h1{
+    color: white;
+    font-size: 10vh;
+    font-family: 'Mansalva', cursive;
+    display: inline-block;
+    position: absolute;
+    left: 40vw;
+    top: 2vh;
+}
+
+#logo_container{
+    position: absolute;
+    left: 2vw;
+    top: 1vh;
+    height: 12vh;
+    width: 10vw;
+    display: inline-block;
+}
+
+#logo_container img{
+	height:100%;
+	width:100%;
 }
 
 .navbar{
-	position:fixed;
+    top:15vh;
+	position: absolute;
 	width:100%;
 	z-index: 100;
 }
@@ -14,43 +45,36 @@ body{
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color:#333;
+	background-color: white;
+    height: 8vh;
 }
 
 .navbar li{
 	display:inline-block;
 }
 
-.navbar a {
+.navbar a{
   display: block;
-  position:relative;
-  bottom:20px;
-  color: white;
+  position: relative;
+  color: black;
   text-align: center;
-  padding: 15px 80px;
+  padding: 3vh 3.5vw;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  transition: 0.5s;
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
+    color: white;
+    transition: 0.5s;
 }
 
-.navbar li:first-child{
-	width:100px;
-	height:50px;
-	overflow:hidden;
-	margin-top:20px;
-	margin-left:30px;
-}
-
-.navbar img{
-	height:100%;
-	width:100%;
-}
-
-.navbar li:nth-child(2){
-	margin-left:100px;
+.All{
+  display:  block;
+  position: relative;
+  bottom: 5.2vh;
+  width: 100vw;
 }
 
 .tab-container{
@@ -144,6 +168,7 @@ ul.switch > li:after{
     height: 110vh;
     position: relative;
     top: 17vh;
+    overflow: scroll;
 }
 
 .intra{
@@ -151,29 +176,29 @@ ul.switch > li:after{
     height: 110vh;
     position: relative;
     top: 17vh;
+    overflow: scroll;
 }
 
-.f {
+.p {
     background-color: orange;
 }
 
-.u{
+.q{
     background-color: white;
 }
 
-.c{
+.r{
     background-color: green;
 }
 
-.k{
+.s{
     background-color: blue;
 }
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .wrapper{
     position:absolute;
-    top:92vh;
+    top:82vh;
     left:35vw;
   text-align:center;
   margin:0px auto;
@@ -227,4 +252,64 @@ ul.switch > li:after{
   background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
   background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+}
+.upcoming{
+	padding-left: 1%;
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+	max-width:95%;
+    background-position: 50% 50%;
+}
+
+#upcoming{
+	display: block;
+	text-align: left;
+	font-size: 30px;
+	position: relative;
+	left: 2.5%;
+	font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.show img{
+	width: 51.5%;
+	display:block;
+	position: relative;
+	right: 3.3%;
+    border-radius: 15px;
+}
+
+.show{
+    position: relative;
+	display: inline-block;
+	width: 45%;
+	height:35vh;
+	vertical-align: top;
+	padding: 2% 1.2%;
+    left: 2.5%;
+}
+
+.shows{
+	text-align: center;
+}
+
+.description{
+	vertical-align: top;
+	text-align: left;
+	display:inline-block;
+	width:46%;
+	position:relative;
+	left:24%;
+	bottom: 29vh;
+    line-height: 1.2;
+}
+
+.description h1{
+	font-size: 24px;
+}
+
+.description h2{
+	font-size: 20px;
+	line-height: 1.8;
+    font-style: italic;
 }

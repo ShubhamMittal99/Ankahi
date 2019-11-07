@@ -69,7 +69,7 @@ body {
   position: relative;
   color: black;
   text-align: center;
-  padding: 3vh 5.5vw;
+  padding: 3vh 3.5vw;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: 0.5s;
@@ -100,16 +100,16 @@ li a:hover {
 
 .first {
     position:relative;
-    height:45vh;
-    top:4vh;
+    height:40vh;
+    bottom:2vh;
     left: 20vw;
 }
 
 .second {
     position: relative;
-    top: 0vh;
+    bottom: 5vh;
     /*border:1px solid red;*/
-    height:45vh;
+    height:40vh;
     right: 25vw;
 }
     #stage {
@@ -213,7 +213,7 @@ img {
 
 .wrapper1{
     position:absolute;
-    top:30vh;
+    top:35vh;
     left:10vw;
     text-align:center;
     margin:0px auto;
@@ -222,7 +222,7 @@ img {
 
 .wrapper2{
     position:absolute;
-    top:75vh;
+    top:80vh;
     right:13vw;
     text-align:center;
     margin:0px auto;
