@@ -53,7 +53,7 @@
         
     </div>
         
-        <div class="container first">
+        <div class="container first 1">
             <div id="stage">
                 <div id="shape" class="ring" style="animation: spin infinite 40s linear;">
                     <div class="plane one"><img src = "images/gall1.jpg"></div>
@@ -72,9 +72,9 @@
             </div>
         </div>
         
-        <div class="container second">
+        <div class="container first 2">
             <div id="stage">
-                <div id="shape" class="ring" style="animation: spin_rev infinite 40s linear;">
+                <div id="shape" class="ring" style="animation: spin infinite 40s linear;">
                     <div class="plane one"><img src = "images/gall1%20-%202.jpg"></div>
                     <div class="plane two"><img src = "images/gall2%20-%202.jpg"></div>
                     <div class="plane three"><img src = "images/gall3%20-%202.jpg"></div>
@@ -91,6 +91,44 @@
             </div>
         </div>
         
+        <div class="container second 1">
+            <div id="stage">
+                <div id="shape" class="ring" style="animation: spin_rev infinite 40s linear;">
+                    <div class="plane one"><img src = "images/gall1%20-%203.jpg"></div>
+                    <div class="plane two"><img src = "images/gall2%20-%203.jpg"></div>
+                    <div class="plane three"><img src = "images/gall3%20-%203.jpg"></div>
+                    <div class="plane four"><img src = "images/gall4%20-%203.jpg"></div>
+                    <div class="plane five"><img src = "images/gall5%20-%203.jpg"></div>
+                    <div class="plane six"><img src = "images/gall6%20-%203.jpg"></div>
+                    <div class="plane seven"><img src = "images/gall7%20-%203.jpg"></div>
+                    <div class="plane eight"><img src = "images/gall8%20-%203.jpg"></div>
+                    <div class="plane nine"><img src = "images/gall9%20-%203.jpg"></div>
+                    <div class="plane ten"><img src = "images/gall10%20-%203.jpg"></div>
+                    <div class="plane eleven"><img src = "images/gall11%20-%203.jpg"></div>
+                    <div class="plane twelve"><img src = "images/gall12%20-%203.jpg"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container second 2">
+            <div id="stage">
+                <div id="shape" class="ring" style="animation: spin_rev infinite 40s linear;">
+                    <div class="plane one"><img src = "images/gall1%20-%204.jpg"></div>
+                    <div class="plane two"><img src = "images/gall2%20-%204.jpg"></div>
+                    <div class="plane three"><img src = "images/gall3%20-%204.jpg"></div>
+                    <div class="plane four"><img src = "images/gall4%20-%204.jpg"></div>
+                    <div class="plane five"><img src = "images/gall5%20-%204.jpg"></div>
+                    <div class="plane six"><img src = "images/gall6%20-%204.jpg"></div>
+                    <div class="plane seven"><img src = "images/gall7%20-%204.jpg"></div>
+                    <div class="plane eight"><img src = "images/gall8%20-%204.jpg"></div>
+                    <div class="plane nine"><img src = "images/gall9%20-%204.jpg"></div>
+                    <div class="plane ten"><img src = "images/gall10%20-%204.jpg"></div>
+                    <div class="plane eleven"><img src = "images/gall11%20-%204.jpg"></div>
+                    <div class="plane twelve"><img src = "images/gall12%20-%204.jpg"></div>
+                </div>
+            </div>
+        </div>
         
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -110,21 +148,23 @@
         planes[i].onclick = function(){
             
             var rings = document.querySelectorAll(".ring");
-            
             if(this.parentNode.parentNode.parentNode.classList.item(1)==="first") {
-            if(rings[0].style.webkitAnimationPlayState==="paused"){
-                rings[0].style.webkitAnimationPlayState="running";
+                var x = this.parentNode.parentNode.parentNode.classList.item(2);
+                if(rings[x-1].style.webkitAnimationPlayState==="paused"){
+                rings[x-1].style.webkitAnimationPlayState="running";
             }
             else{
-                rings[0].style.webkitAnimationPlayState="paused";
+                rings[x-1].style.webkitAnimationPlayState="paused";
             }}
             
             if(this.parentNode.parentNode.parentNode.classList.item(1)==="second") {
-            if(rings[1].style.webkitAnimationPlayState==="paused"){
-                rings[1].style.webkitAnimationPlayState="running";
+                var x = this.parentNode.parentNode.parentNode.classList.item(2);
+                var y = Number(x);
+                if(rings[y+1].style.webkitAnimationPlayState==="paused"){
+                rings[y+1].style.webkitAnimationPlayState="running";
             }
             else{
-                rings[1].style.webkitAnimationPlayState="paused";
+                rings[y+1].style.webkitAnimationPlayState="paused";
             }
         }
         }}
@@ -161,48 +201,82 @@
         
         //tabs
         
-        var tabs = $('.tabs1');
-var selector = $('.tabs1').find('a').length;
-//var selector = $(".tabs").find(".selector");
-var activeItem = tabs.find('.active1');
-var activeWidth = activeItem.innerWidth();
-$(".selector1").css({
-  "left": activeItem.position.left + "px", 
-  "width": activeWidth + "px"
-});
-
-$(".tabs1").on("click","a",function(e){
-  e.preventDefault();
-  $('.tabs1 a').removeClass("active1");
-  $(this).addClass('active1');
-  var activeWidth = $(this).innerWidth();
-  var itemPos = $(this).position();
-  $(".selector1").css({
-    "left":itemPos.left + "px", 
-    "width": activeWidth + "px"
-  });
-});
+    var tabs = $('.tabs1');
+    var selector = $('.tabs1').find('a').length;
+    var sets = document.querySelectorAll(".first");
+    //var selector = $(".tabs").find(".selector");
+    var activeItem = tabs.find('.active1');
+    var initial = document.querySelector(".active1");
+    var activeWidth = activeItem.innerWidth();
+    var x = initial.classList.item(0);
+        for(i=0;i<sets.length;i++){
+                sets[i].style.display="none";
+            }
+    sets[x-1].style.display="block";
         
-        var tabs = $('.tabs2');
-var selector = $('.tabs2').find('a').length;
-//var selector = $(".tabs").find(".selector");
-var activeItem = tabs.find('.active2');
-var activeWidth = activeItem.innerWidth();
-$(".selector2").css({
-  "left": activeItem.position.left + "px", 
-  "width": activeWidth + "px"
-});
+    $(".selector1").css({
+      "left": activeItem.position.left + "px", 
+      "width": activeWidth + "px"
+    });
 
-$(".tabs2").on("click","a",function(e){
-  e.preventDefault();
-  $('.tabs2 a').removeClass("active2");
-  $(this).addClass('active2');
-  var activeWidth = $(this).innerWidth();
-  var itemPos = $(this).position();
-  $(".selector2").css({
-    "left":itemPos.left + "px", 
-    "width": activeWidth + "px"
-  });
-});
-   </script>
-</html>
+    $(".tabs1").on("click","a",function(e){
+      e.preventDefault();
+      $('.tabs1 a').removeClass("active1");
+      var num = this.classList.item(0);
+      $(this).addClass('active1');
+        
+      var sets = document.querySelectorAll(".first");
+            var set = sets[num-1];
+            for(i=0;i<sets.length;i++){
+                sets[i].style.display="none";
+            }
+       set.style.display="block";
+        
+      var activeWidth = $(this).innerWidth();
+      var itemPos = $(this).position();
+      $(".selector1").css({
+        "left":itemPos.left + "px", 
+        "width": activeWidth + "px"
+      });
+    });
+
+    var tabs = $('.tabs2');
+    var selector = $('.tabs2').find('a').length;
+    var sets = document.querySelectorAll(".second");
+    //var selector = $(".tabs").find(".selector");
+    var activeItem = tabs.find('.active2');
+    var initial = document.querySelector(".active2");
+    var activeWidth = activeItem.innerWidth();
+    var x = initial.classList.item(0);
+        for(i=0;i<sets.length;i++){
+                sets[i].style.display="none";
+            }
+    sets[x-1].style.display="block";
+        
+    $(".selector2").css({
+      "left": activeItem.position.left + "px", 
+      "width": activeWidth + "px"
+    });
+
+    $(".tabs2").on("click","a",function(e){
+      e.preventDefault();
+      $('.tabs2 a').removeClass("active2");
+      var num = this.classList.item(0);
+      $(this).addClass('active2');
+        
+      var sets = document.querySelectorAll(".second");
+            var set = sets[num-1];
+            for(i=0;i<sets.length;i++){
+                sets[i].style.display="none";
+            }
+       set.style.display="block";
+        
+      var activeWidth = $(this).innerWidth();
+      var itemPos = $(this).position();
+      $(".selector2").css({
+        "left":itemPos.left + "px", 
+        "width": activeWidth + "px"
+      });
+    });
+       </script>
+    </html>
