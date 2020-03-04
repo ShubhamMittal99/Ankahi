@@ -72,7 +72,8 @@ li a:hover {
 
 .slideshow .slide{
     width:100%;
-	max-height:100vh;
+    height:100%;
+	/*max-height:100vh;*/
 	overflow: hidden;
 	animation: EaseIn 2s infinite; 
 }
